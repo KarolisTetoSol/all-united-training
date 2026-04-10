@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All United Risk Managers - New Hire Training</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- SIDEBAR -->
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">AU</div>
+      <div>
+        <div class="brand">All United</div>
+        <div class="brand-sub">Risk Managers</div>
+      </div>
+    </div>
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+    <div class="nav-section-label">Training Modules</div>
+    <button class="nav-btn active" data-tab="guide">
+      <span class="nav-icon">&#128218;</span> Training Guide
+    </button>
+    <button class="nav-btn" data-tab="quiz">
+      <span class="nav-icon">&#9997;</span> Knowledge Quiz
+    </button>
+    <button class="nav-btn" data-tab="scenarios">
+      <span class="nav-icon">&#128269;</span> Scenarios
+    </button>
+
+    <div id="guideTOC" class="toc">
+      <div class="nav-section-label" style="margin-top:8px">Guide Sections</div>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="footer-badge">New Hire Training</div>
+      <div class="footer-version">TOA PD &amp; NTL Programs</div>
+    </div>
+  </nav>
+
+  <!-- MOBILE HEADER -->
+  <header id="mobileHeader">
+    <button id="menuBtn" aria-label="Open menu">&#9776;</button>
+    <span>All United Training</span>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main">
+
+    <!-- ========== TRAINING GUIDE ========== -->
+    <div id="tab-guide" class="tab-panel active">
+      <div class="page-title">
+        <h1>New Hire Training Guide</h1>
+        <p class="subtitle">TOA Physical Damage &amp; Non-Trucking Liability Programs</p>
+      </div>
+
+      <!-- S1 -->
+      <section class="guide-section" id="gs-1">
+        <h2>1. Introduction &amp; Key Parties</h2>
+
+        <div class="callout callout-info">
+          <strong>All United Risk Managers LLC</strong> is the claims administration company designated by the Truck Owners Association (TOA). When a covered driver has an accident or loss, we are the people they contact.
+        </div>
+
+        <h3>The Key Parties</h3>
+        <table>
+          <thead><tr><th>Party</th><th>Role</th></tr></thead>
+          <tbody>
+            <tr><td><strong>TOA</strong></td><td>Named Insured. Creates and administers the Benefits-Package Programs. Enrolls members, approves drivers, issues certificates.</td></tr>
+            <tr><td><strong>Agents House Inc.</strong></td><td>TOA's designated programs administrator. Issues certificates on TOA's behalf.</td></tr>
+            <tr><td><strong>Underwriters / Insurance Co.</strong></td><td>Surplus lines insurance company that issues the underlying policy.</td></tr>
+            <tr><td><strong>All United Risk Managers</strong></td><td>Claims administrator. Processes claims, coordinates adjusters, handles claims lifecycle.</td></tr>
+            <tr><td><strong>Coverage Holder</strong></td><td>Truck owner/company that enrolls vehicles and drivers. NOT the Named Insured &mdash; a beneficiary only.</td></tr>
+            <tr><td><strong>Approved Driver</strong></td><td>Person approved by TOA to operate enrolled vehicles, documented by a certificate.</td></tr>
+            <tr><td><strong>Agents / Brokers</strong></td><td>Sell TOA programs. Do NOT have authority to issue certificates or change terms.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-warn">
+          <strong>Critical Concept:</strong> The coverage holder is NOT the insured. TOA is the Named Insured. The coverage holder is solely a beneficiary. Only the vehicles/equipment are insured, not the person.
+        </div>
+      </section>
+
+      <!-- S2 -->
+      <section class="guide-section" id="gs-2">
+        <h2>2. Key Definitions</h2>
+        <table>
+          <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Auto / Automobile</strong></td><td>Class 3-8 truck or tractor (GVWR &ge; 10,001 lbs), or commercial trailer/semi-trailer, including permanent factory equipment.</td></tr>
+            <tr><td><strong>Approved Driver</strong></td><td>Person approved by TOA whose approval has not been cancelled/revoked. Approval occurs at the exact time the administrator issues a certificate.</td></tr>
+            <tr><td><strong>Team Driver</strong></td><td>ANY person inside the auto (except emergency strangers). Passengers are NOT allowed. Everyone inside is a team driver &mdash; including family and children.</td></tr>
+            <tr><td><strong>Coverage Holder</strong></td><td>TOA member/sponsor whose vehicle has been assigned coverage, shown by a certificate. Solely a beneficiary.</td></tr>
+            <tr><td><strong>Actual Cash Value</strong></td><td>Market value at time of loss based on ORIGINAL factory options, minus decrease for prior damage. Determined via Kelly Blue Book, CCC, Price Digests, etc.</td></tr>
+            <tr><td><strong>Stated Value</strong></td><td>Value the coverage holder assigns when applying for coverage.</td></tr>
+            <tr><td><strong>Unacceptable Driver</strong></td><td>Driver whose MVR or license status does not meet General Condition 31 criteria.</td></tr>
+            <tr><td><strong>At Fault Accident</strong></td><td>Accident listed on MVR, OR driver issued citation, OR police report indicates driver at fault.</td></tr>
+            <tr><td><strong>Unit</strong></td><td>A single vehicle or mobile equipment machine in the schedule.</td></tr>
+            <tr><td><strong>Trainee</strong></td><td>Any person inside the auto for training/learning purposes.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- S3 -->
+      <section class="guide-section" id="gs-3">
+        <h2>3. How TOA Programs Work</h2>
+        <h3>The Contract Process</h3>
+        <ol>
+          <li><strong>Application</strong> &mdash; Sponsor submits a Quote/Application (this IS the offer)</li>
+          <li><strong>Acceptance</strong> &mdash; TOA can accept only by issuing a Certificate. No contract until then.</li>
+          <li><strong>Binding</strong> &mdash; T&amp;C, Quote/App, Certificate, and policies become the Contract.</li>
+          <li><strong>MVRs Required</strong> &mdash; Motor vehicle records required to bind any benefit.</li>
+        </ol>
+        <div class="key-points">
+          <h4>Key Rules</h4>
+          <ul>
+            <li>Active TOA membership required for ANY benefit</li>
+            <li>Coverage is <strong>continuous until cancelled</strong> &mdash; no expiration date</li>
+            <li>Only certificates from TOA / Agents House are valid</li>
+            <li>Agent/broker certificates have NO force or effect</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- S4 -->
+      <section class="guide-section" id="gs-4">
+        <h2>4. PD Benefits-Package Program</h2>
+        <p>Covers <strong>direct physical loss of or direct physical damage</strong> to enrolled vehicles in the contiguous US, DC, and Canada.</p>
+        <h3>Benefits Included</h3>
+        <div class="card-grid">
+          <div class="benefit-card"><strong>Physical Damage &amp; Loss</strong><br>All-risk coverage, subject to limits &amp; deductible</div>
+          <div class="benefit-card"><strong>Deductible Waiver</strong><br>Reduces $20,000 deductible to as low as $1,000</div>
+          <div class="benefit-card"><strong>Recovery, Towing &amp; Storage</strong><br>Up to $10,000 per occurrence</div>
+          <div class="benefit-card"><strong>ADD Benefit</strong><br>Up to $50,000 for enrolled drivers</div>
+          <div class="benefit-card"><strong>Legal Benefit</strong><br>Free initial consultation for covered accidents</div>
+          <div class="benefit-card"><strong>Claims Benefit</strong><br>Professional processing by All United</div>
+        </div>
+        <h3>Optional Benefits (Additional Premium)</h3>
+        <table>
+          <thead><tr><th>Benefit</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td>Lease Gap</td><td>Covers gap between ACV and outstanding loan in total loss</td></tr>
+            <tr><td>Non-Owned Trailer</td><td>Covers non-owned trailer while attached to enrolled tractor</td></tr>
+            <tr><td>Non-Experienced Driver</td><td>Covers auto while operated by driver with &lt;1 yr experience</td></tr>
+            <tr><td>Vehicle Storage</td><td>Reduced premium while stored in gated/fenced location</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- S5 -->
+      <section class="guide-section" id="gs-5">
+        <h2>5. NTL Benefits-Package Program</h2>
+        <div class="callout callout-info">
+          <strong>PD</strong> = damage to YOUR enrolled auto &nbsp;|&nbsp; <strong>NTL</strong> = liability for damage/injury to OTHERS while using your truck for personal (non-trucking) purposes
+        </div>
+        <p>Coverage territory: US, territories/possessions, Puerto Rico. <em>(Note: PD includes Canada; NTL does not.)</em></p>
+        <h3>Two Enrollment Options</h3>
+        <table>
+          <thead><tr><th>Option</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Long-Term Lease</strong></td><td>Must lease auto to a regulated Motor Carrier within 48 hours. Provide signed lease within 48 hours. Auto-cancels if not met. Expires when lease ends.</td></tr>
+            <tr><td><strong>Short-Term (20-Day)</strong></td><td>Enrollment for exactly 20 days. Cannot cancel early. Auto-expires.</td></tr>
+          </tbody>
+        </table>
+        <div class="key-points">
+          <h4>Important NTL Rules</h4>
+          <ul>
+            <li>Supplementary to commercial insurance</li>
+            <li>Household members EXCLUDED</li>
+            <li>NO coverage while used for business or transporting cargo</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- S6 -->
+      <section class="guide-section" id="gs-6">
+        <h2>6. The Five Coverage Requirements &mdash; PD</h2>
+        <div class="callout callout-danger">If ANY one requirement is not satisfied, the claim is DENIED.</div>
+        <div class="req-list">
+          <div class="req-item"><span class="req-num">1</span><div><strong>Auto Must Be Enrolled</strong><br>Specifically described in the PD Certificate, shown as enrolled at time of loss.</div></div>
+          <div class="req-item"><span class="req-num">2</span><div><strong>All Drivers Must Be Approved</strong><br>ALL persons inside must be active TOA members with certificates issued BEFORE entering the auto.</div></div>
+          <div class="req-item"><span class="req-num">3</span><div><strong>All Drivers Must Be "Acceptable"</strong><br>MVR must meet criteria. Applies EVEN IF driver was approved and certificated.</div></div>
+          <div class="req-item"><span class="req-num">4</span><div><strong>Commercial Purpose</strong><br>If driver is using the auto at time of loss, it must be for a commercial purpose.</div></div>
+          <div class="req-item"><span class="req-num">5</span><div><strong>Full Compliance</strong><br>All T&amp;C, Policy, Quote/Application, and Certificate must be complied with.</div></div>
+        </div>
+        <div class="key-points">
+          <h4>Critical Points</h4>
+          <ul>
+            <li>Unenrolled drivers cannot be given permission &mdash; auto is ineligible</li>
+            <li>Stolen autos are ineligible even if enrolled unknowingly</li>
+            <li>Tractor and trailer are TWO separate autos &mdash; each needs its own certificate</li>
+            <li>Failure = loss of ALL benefits (Legal, Claims, Deductible Waiver, etc.)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- S7 -->
+      <section class="guide-section" id="gs-7">
+        <h2>7. The Five Coverage Requirements &mdash; NTL</h2>
+        <div class="req-list">
+          <div class="req-item"><span class="req-num">1</span><div><strong>Auto Must Be Enrolled</strong> in NTL Certificate at time of bodily injury or property damage.</div></div>
+          <div class="req-item"><span class="req-num">2</span><div><strong>All Drivers Approved</strong> with certificates issued BEFORE entering auto.</div></div>
+          <div class="req-item"><span class="req-num">3</span><div><strong>All Drivers Acceptable</strong> &mdash; same MVR criteria as PD.</div></div>
+          <div class="req-item"><span class="req-num">4</span><div><strong>NOT Used for Business or Cargo</strong> &mdash; must be non-business, non-commercial.</div></div>
+          <div class="req-item"><span class="req-num">5</span><div><strong>Full Compliance</strong> with all T&amp;C.</div></div>
+        </div>
+        <h3>"In the Business of Any Lessee" Includes:</h3>
+        <ul>
+          <li>For the benefit of or furthering the interest of any lessee</li>
+          <li>Acting within scope of employment by any lessee</li>
+          <li>Under direction, control, or dispatch of any lessee</li>
+          <li>Traveling to/from locations for cargo pickup/delivery</li>
+          <li>Traveling between garage and terminal/facility for cargo purposes</li>
+        </ul>
+      </section>
+
+      <!-- S8 -->
+      <section class="guide-section" id="gs-8">
+        <h2>8. Acceptable vs. Unacceptable Drivers</h2>
+        <h3>Acceptable Driver Requirements (ALL must be met)</h3>
+        <table>
+          <thead><tr><th>Criterion</th><th>Requirement</th></tr></thead>
+          <tbody>
+            <tr><td>License</td><td>Valid, unexpired CDL of the correct class. No suspended/revoked licenses.</td></tr>
+            <tr><td>Age</td><td>Between 21 and 70 inclusive</td></tr>
+            <tr><td>Experience</td><td>Min 2 years (or 1+ year with approved Safety &amp; Training Program)</td></tr>
+            <tr><td>Physical</td><td>Meet FMCSA requirements (49 CFR 391.41)</td></tr>
+            <tr><td>Licenses</td><td>Must NOT hold multiple driver's licenses</td></tr>
+            <tr><td>English</td><td>Must speak English sufficiently (49 CFR 391.11)</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Unacceptable Driver Triggers (ANY = Unacceptable)</h3>
+        <table class="table-danger">
+          <thead><tr><th>Trigger</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td>Age</td><td>Under 23</td></tr>
+            <tr><td>Experience</td><td>Less than 1 year</td></tr>
+            <tr><td>License</td><td>No valid CDL; suspended/revoked; multiple licenses; driving-related suspension within 24 months</td></tr>
+            <tr><td>At-Fault Accidents</td><td>More than 1 in last 3 years</td></tr>
+            <tr><td>Minor Violations</td><td>More than 5 in 5 years; OR more than 3 in 3 years</td></tr>
+            <tr><td>Combined</td><td>More than 2 minor + 1 at-fault in 3 years</td></tr>
+            <tr><td>Critical/Major</td><td>ANY in last 5 years</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-warn">
+          When a driver becomes unacceptable, the coverage holder must notify TOA within <strong>24 hours</strong> and <strong>immediately prohibit</strong> the driver from operating enrolled autos.
+        </div>
+      </section>
+
+      <!-- S9 -->
+      <section class="guide-section" id="gs-9">
+        <h2>9. Violation Categories</h2>
+        <div class="violation-grid">
+          <div class="violation-card critical">
+            <h4>Critical Violations</h4>
+            <p class="viol-rule">ANY in last 5 years = Unacceptable</p>
+            <ul>
+              <li>DWI / DUI (alcohol)</li>
+              <li>Any alcohol-related driving violation</li>
+              <li>DUI (drugs / controlled substances)</li>
+              <li>Any drug-related driving violation</li>
+              <li>License suspension for failure to submit to testing</li>
+            </ul>
+          </div>
+          <div class="violation-card major">
+            <h4>Major Violations</h4>
+            <p class="viol-rule">ANY in last 5 years = Unacceptable</p>
+            <ul>
+              <li>Manslaughter / reckless homicide</li>
+              <li>Felony involving a motor vehicle</li>
+              <li>Racing</li>
+              <li>Hit and run</li>
+              <li>Reckless driving</li>
+              <li>License suspension for points</li>
+              <li>Driving while suspended/revoked</li>
+              <li>Fleeing/eluding a peace officer</li>
+              <li>Driving over 100 mph / 160 km/h</li>
+              <li>Driving CMV without required CDL</li>
+            </ul>
+          </div>
+          <div class="violation-card minor">
+            <h4>Minor Violations</h4>
+            <p class="viol-rule">Limits: 5 in 5 yrs / 3 in 3 yrs</p>
+            <ul>
+              <li>Any moving violation not critical/major</li>
+              <li>Defective brakes</li>
+              <li>Defective equipment</li>
+              <li>Oversize / overweight vehicle</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout callout-info">Violations count whether or not they are actually recorded on the MVR &mdash; the test is whether they <em>"would be recorded."</em></div>
+      </section>
+
+      <!-- S10 -->
+      <section class="guide-section" id="gs-10">
+        <h2>10. Payment, Cancellation &amp; Reinstatement</h2>
+        <h3>Payment Rules</h3>
+        <table>
+          <thead><tr><th>Rule</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td>Initial Payment</td><td>Deposit (= 1 month's premium) + first month's premium</td></tr>
+            <tr><td>Monthly Due</td><td>Must be received in cleared funds <strong>before the 1st</strong></td></tr>
+            <tr><td>Method</td><td>ACH or credit card. Processing starts up to 5 business days before the 1st.</td></tr>
+            <tr><td>Responsibility</td><td>All payments are the sponsor's responsibility</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Removing Autos / Cancellation Timing</h3>
+        <table>
+          <thead><tr><th>When Requested</th><th>Effect</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Before the 1st</strong></td><td>Upcoming month's premium reduced accordingly</td></tr>
+            <tr><td><strong>1st &ndash; 10th</strong></td><td>No insurable event: may be deemed cancelled end of prior month. Insurable event: premium fully earned.</td></tr>
+            <tr><td><strong>After the 10th</strong></td><td>Request is <strong>INEFFECTIVE</strong>. Premium fully earned.</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Adding Autos</h3>
+        <table>
+          <thead><tr><th>When</th><th>Cost</th></tr></thead>
+          <tbody>
+            <tr><td>1st &ndash; 19th</td><td>Full premium for current month</td></tr>
+            <tr><td>20th or later</td><td>Current month may be waived (TOA discretion) if next month's premium received in time</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Late Payment Process</h3>
+        <ol>
+          <li>Premium deemed fully earned on the 1st; deposit applied; shortfall owed</li>
+          <li>TOA sends a <strong>Notice of Intent to Cancel</strong> or <strong>Firm Decision to Cancel</strong></li>
+          <li><strong>Intent:</strong> can pay before cancellation date to rescind</li>
+          <li><strong>Firm Decision:</strong> cancellation proceeds regardless of payment</li>
+        </ol>
+
+        <h3>Reinstatement &amp; Reapplication</h3>
+        <table>
+          <thead><tr><th>Situation</th><th>Requirements</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Within 30 days</strong></td><td>Reinstatement: pay all premiums + fee + signed No Loss Letter. Retroactive if approved. Pay directly to TOA.</td></tr>
+            <tr><td><strong>After 30 days</strong></td><td>Reapplication: new Quote/Application + fees. New Certificate with new effective date. If 60+ days: new info required.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="callout callout-danger">
+          <strong>Total Loss:</strong> Premiums for the <strong>12-month period following the loss date</strong> become fully earned and are deducted from the claim payout along with the deductible.
+        </div>
+      </section>
+
+      <!-- S11 -->
+      <section class="guide-section" id="gs-11">
+        <h2>11. Duties in the Event of Loss</h2>
+        <div class="step-list">
+          <div class="step"><span class="step-num">1</span><div><strong>Call the Police</strong><br>Required if damage &gt; $5,000, a crime is involved, or there was bodily injury / third-party property damage. Driver must WAIT and give an account.</div></div>
+          <div class="step"><span class="step-num">2</span><div><strong>Report to All United</strong><br>Within <strong>24 hours</strong>. Online, email, phone, or fax.</div></div>
+          <div class="step"><span class="step-num">3</span><div><strong>Photograph / Video Everything</strong><br>Scene, damage, cause &mdash; IMMEDIATELY at the scene. Must have working camera at all times.</div></div>
+        </div>
+
+        <h3>Required Documentation</h3>
+        <div class="doc-grid">
+          <span class="doc-tag">Photos / video</span>
+          <span class="doc-tag">Driver's signed statement</span>
+          <span class="doc-tag">CDL copy</span>
+          <span class="doc-tag">MVR (&lt; 30 days old)</span>
+          <span class="doc-tag">Driver's phone number</span>
+          <span class="doc-tag">Employment application / lease</span>
+          <span class="doc-tag">Log book (8 days)</span>
+          <span class="doc-tag">Police / fire report</span>
+          <span class="doc-tag">Damage estimate &amp; towing bill</span>
+          <span class="doc-tag">Registration &amp; title</span>
+          <span class="doc-tag">Liens &amp; loss payees</span>
+        </div>
+
+        <h3>Missing Documents Timeline</h3>
+        <table>
+          <thead><tr><th>Notice</th><th>When</th></tr></thead>
+          <tbody>
+            <tr><td>First Notice</td><td>2nd calendar day after claim filed</td></tr>
+            <tr><td>Second Notice</td><td>3rd day after First Notice</td></tr>
+            <tr><td>Third &amp; Final Notice</td><td>5th day after Second Notice &mdash; 6-day deadline stated</td></tr>
+            <tr><td><strong>Claim Suspended</strong></td><td>6 days after Third Notice if docs still missing</td></tr>
+          </tbody>
+        </table>
+        <p>Reopen deadline: <strong>12 months</strong> from date of loss.</p>
+
+        <h3>Other Critical Duties</h3>
+        <ul>
+          <li>No expenses without permission</li>
+          <li>Do not impair recovery rights or release claims against others</li>
+          <li>Send legal papers immediately</li>
+          <li>Allow inspection before repairs (failure = claim invalidated)</li>
+          <li>Cooperate fully &amp; produce drivers for interviews (failure = claim invalidated)</li>
+          <li>Provide interpreter if driver doesn't speak English (at coverage holder's expense)</li>
+          <li>Submit Proof of Loss within <strong>60 days</strong></li>
+        </ul>
+      </section>
+
+      <!-- S12 -->
+      <section class="guide-section" id="gs-12">
+        <h2>12. Deductibles &amp; Deductible Waiver</h2>
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-val">$20,000</div><div class="stat-label">Base Policy Deductible (per unit)</div></div>
+          <div class="stat-box accent"><div class="stat-val">$1,000</div><div class="stat-label">Lowest Possible w/ Waiver</div></div>
+        </div>
+        <p>The <strong>Deductible Waiver Benefit</strong> means TOA covers an agreed portion of the $20,000. The certificate shows the "combined deductible" (e.g., $20,000 &minus; $19,000 waiver = $1,000).</p>
+
+        <h3>You LOSE the Waiver If:</h3>
+        <ul>
+          <li>The five coverage requirements are NOT satisfied</li>
+          <li>A T&amp;C violation makes the loss ineligible</li>
+        </ul>
+        <p>Result: coverage holder pays the full <strong>$20,000</strong>.</p>
+
+        <h3>Special Deductible Situations</h3>
+        <table>
+          <thead><tr><th>Situation</th><th>Deductible</th></tr></thead>
+          <tbody>
+            <tr><td>Vehicle Storage (not gated/fenced)</td><td>$10,000</td></tr>
+            <tr><td>Autos older than 15 years</td><td>Minimum $2,500</td></tr>
+            <tr><td>One Major/Critical violation driver</td><td>$5,000</td></tr>
+            <tr><td>Rent/lease with no purchase option</td><td>$2,500 or 5% of ACV (whichever higher)</td></tr>
+          </tbody>
+        </table>
+        <p>Tractor and trailer each have their own <strong>separate</strong> deductible.</p>
+      </section>
+
+      <!-- S13 -->
+      <section class="guide-section" id="gs-13">
+        <h2>13. Limits of Liability &amp; Valuation</h2>
+        <p>Maximum payout = the <strong>LESSER</strong> of:</p>
+        <ol>
+          <li>Stated value on the Certificate</li>
+          <li>Actual Cash Value (ACV) at time of loss</li>
+          <li>Cost of repair / rebuild</li>
+          <li>Policy limit ($175,000/unit; $1,500,000/occurrence)</li>
+        </ol>
+        <p>MINUS the deductible.</p>
+
+        <h3>Understated Value Penalty</h3>
+        <p>If stated value &lt; ACV by the greater of $7,500 or 10% of stated value, payout is proportionally reduced.</p>
+
+        <h3>ACV Rules</h3>
+        <ul>
+          <li>Based on ORIGINAL factory-installed options only</li>
+          <li>Aftermarket items NOT considered</li>
+          <li>Prior damage deducted</li>
+          <li>Depreciation: <strong>12.5% per year</strong></li>
+        </ul>
+
+        <h3>Rebuilt Title Multipliers</h3>
+        <table>
+          <thead><tr><th>Disclosure</th><th>Multiplier</th></tr></thead>
+          <tbody>
+            <tr><td>Written disclosure made</td><td><strong>70%</strong> of normal limits</td></tr>
+            <tr><td>No disclosure</td><td><strong>50%</strong> of normal limits</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- S14 -->
+      <section class="guide-section" id="gs-14">
+        <h2>14. Key Exclusions &mdash; PD Program</h2>
+        <h3>Coverage-Related</h3>
+        <table>
+          <thead><tr><th>Exclusion</th><th>Rule</th></tr></thead>
+          <tbody>
+            <tr><td>Coverage not assigned</td><td>No certificate before loss = no coverage</td></tr>
+            <tr><td>Unapproved driver</td><td>ANY unapproved person inside = no coverage (even passengers, even the coverage holder)</td></tr>
+            <tr><td>Unacceptable driver</td><td>ANY person with bad MVR inside = no coverage (even if approved)</td></tr>
+            <tr><td>Police report failure</td><td>Crime: coverage VOID. No crime &amp; damage &gt;$5K: limit reduced to $5K or 25% ACV</td></tr>
+            <tr><td>Cause not identified</td><td>Must prove location, time, cause, and provide immediate photos</td></tr>
+            <tr><td>Oil leakage</td><td>Excluded. Must stop immediately if collision suspected.</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Property &amp; Use Exclusions</h3>
+        <div class="excl-grid">
+          <span class="excl-tag">Personal property &amp; electronics</span>
+          <span class="excl-tag">Non-factory / aftermarket equipment</span>
+          <span class="excl-tag">Tarps, ropes, chains, tie-downs</span>
+          <span class="excl-tag">Tires/wheels (unless fire, theft, or collision &gt;$1K)</span>
+          <span class="excl-tag">Recovery/towing equipment</span>
+          <span class="excl-tag">Parked &gt;15 days (not in secure area)</span>
+          <span class="excl-tag">Driver under 21</span>
+          <span class="excl-tag">Unlicensed driver</span>
+          <span class="excl-tag">Racing / stunting</span>
+          <span class="excl-tag">Livery / passenger transport</span>
+          <span class="excl-tag">Undisclosed encumbrances</span>
+          <span class="excl-tag">Illicit trade</span>
+          <span class="excl-tag">Wear &amp; tear / mechanical failure</span>
+          <span class="excl-tag">Towing non-commercial items</span>
+          <span class="excl-tag">Hazmat / coal / livestock / logging</span>
+          <span class="excl-tag">Employee / household theft</span>
+          <span class="excl-tag">Voluntary parting with possession</span>
+          <span class="excl-tag">Cargo liability</span>
+          <span class="excl-tag">Downtime / business interruption</span>
+          <span class="excl-tag">War / terrorism / nuclear / cyber</span>
+        </div>
+      </section>
+
+      <!-- S15 -->
+      <section class="guide-section" id="gs-15">
+        <h2>15. Key Exclusions &mdash; NTL Program</h2>
+        <div class="excl-grid">
+          <span class="excl-tag">Trucking / business use (core NTL exclusion)</span>
+          <span class="excl-tag">Contractual liability</span>
+          <span class="excl-tag">Workers' compensation</span>
+          <span class="excl-tag">Employee / employer's liability</span>
+          <span class="excl-tag">Fellow employee injury</span>
+          <span class="excl-tag">Care, custody or control</span>
+          <span class="excl-tag">Property handling (before loading / after unloading)</span>
+          <span class="excl-tag">Mechanical device (unattached)</span>
+          <span class="excl-tag">Completed operations</span>
+          <span class="excl-tag">Racing / stunting</span>
+          <span class="excl-tag">Parades / exhibitions</span>
+          <span class="excl-tag">Expected / intended injury</span>
+          <span class="excl-tag">Pollution</span>
+          <span class="excl-tag">Fraudulent / dishonest acts</span>
+          <span class="excl-tag">Punitive damages</span>
+          <span class="excl-tag">War / terrorism / nuclear</span>
+        </div>
+      </section>
+
+      <!-- S16 -->
+      <section class="guide-section" id="gs-16">
+        <h2>16. Mandatory Endorsements</h2>
+        <p>These apply to ALL PD Program enrollees. Non-compliance can void coverage.</p>
+        <div class="endorsement-list">
+          <details>
+            <summary><strong>1. Functional Camera</strong></summary>
+            <p>Driver must ALWAYS have a fully-charged, functional camera on their person or within immediate reach. <strong>Failure = no duty to provide any benefit or payment.</strong></p>
+          </details>
+          <details>
+            <summary><strong>2. Approved Driver</strong></summary>
+            <p>ALL persons inside must be approved drivers with valid certificates issued BEFORE entering the vehicle. No exceptions.</p>
+          </details>
+          <details>
+            <summary><strong>3. Police Report</strong></summary>
+            <p>If damage &gt;$5K or crime involved: call police, wait, cooperate, submit report. Crime + no compliance = VOID. Non-crime + no compliance = limit reduced to $5K or 25% ACV. Exceptions: incapacity, police arrived on own, non-arson fire, police refuse to come (follow alternate steps).</p>
+          </details>
+          <details>
+            <summary><strong>4. Right of First Denial</strong></summary>
+            <p>TOA can deny a claim first; Underwriters can overrule and pay without it counting against TOA's aggregate deductible.</p>
+          </details>
+          <details>
+            <summary><strong>5. OFAC Search &amp; Identity Investigation</strong></summary>
+            <p>Claimants/drivers may be asked for proof of citizenship/residency. Failure to provide = claim invalidated.</p>
+          </details>
+          <details>
+            <summary><strong>6. Depreciation</strong></summary>
+            <p>In ACV disagreements: 12.5% per year depreciation may be applied to purchase price or stated value.</p>
+          </details>
+          <details>
+            <summary><strong>7. Disclosure of Past Claims</strong></summary>
+            <p>New applicants must disclose ALL claims/accidents/losses from last 3 years. Failure = coverage VOID for open or future claims.</p>
+          </details>
+          <details>
+            <summary><strong>8. Rebuilt Title</strong></summary>
+            <p>Must disclose in writing. Disclosed: 70% multiplier. Not disclosed: 50% multiplier.</p>
+          </details>
+          <details>
+            <summary><strong>9. Conestoga &amp; Non-Factory Equipment</strong></summary>
+            <p>Must be permanently attached and reported at binding. Conestoga: max $15,000 with $2,500 deductible. Other: max $1,000. Depreciation: 12.5%/year.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- S17 -->
+      <section class="guide-section" id="gs-17">
+        <h2>17. Optional Endorsements</h2>
+        <table class="compact-table">
+          <thead><tr><th>#</th><th>Endorsement</th><th>Key Detail</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Occurrence Deductible</td><td>Single deductible per occurrence instead of per unit</td></tr>
+            <tr><td>2</td><td>Additional Insured</td><td>Adds an additional insured</td></tr>
+            <tr><td>3</td><td>Lease Gap</td><td>Covers gap between ACV and loan. Vehicle within 2 years of title year. No overdue payments.</td></tr>
+            <tr><td>4</td><td>Alaska</td><td>Extends to Alaska (excludes Dalton Highway)</td></tr>
+            <tr><td>5</td><td>Unacceptable Driver Inclusion</td><td>Includes a specific unacceptable driver. Requires insurer approval.</td></tr>
+            <tr><td>6</td><td>One Major/Critical Violation</td><td>$5,000 deductible; $50,000 max payout</td></tr>
+            <tr><td>7</td><td>Non-Experienced Driver</td><td>Limits: $60K tractor, $40K trailer, $60K/event. 1st accident only before 1 yr CDL.</td></tr>
+            <tr><td>8</td><td>Radius of Use Limitation</td><td>Coverage only within specified radius. Reduced premium.</td></tr>
+            <tr><td>9</td><td>Combined Vehicle &amp; Cargo Deductible</td><td>Single deductible for both policies</td></tr>
+            <tr><td>10</td><td>Downtime Rental Expense</td><td>Starts 7 days after reporting. Max $500/day. $10K aggregate/policy period.</td></tr>
+            <tr><td>11</td><td>Newly Acquired Vehicle</td><td>Coverage for newly acquired vehicles</td></tr>
+            <tr><td>12-13</td><td>Trailer Interchange</td><td>Coverage for interchange agreements</td></tr>
+            <tr><td>14</td><td>Garbage / Refuse</td><td>Must empty at end of each work day. Failure invalidates claims.</td></tr>
+            <tr><td>15</td><td>Temporary Replacement Vehicle</td><td>Up to 30 days while scheduled vehicle is serviced</td></tr>
+            <tr><td>16</td><td>Non-Owned Trailer</td><td>Covers non-owned trailers while attached. Possessed &gt;10 business days = "owned."</td></tr>
+            <tr><td>17</td><td>Vehicle Storage</td><td>Comprehensive only. Gated/fenced. Max 210 days/year.</td></tr>
+            <tr><td>18</td><td>Conestoga &amp; Equipment</td><td>Non-factory equipment coverage</td></tr>
+            <tr><td>19</td><td>Recovery &amp; Towing Ops</td><td>Coverage for recovery/towing equipment</td></tr>
+            <tr><td>20</td><td>Recreational Vehicles</td><td>Extends to towing/hauling RVs</td></tr>
+            <tr><td>21</td><td>Short Rate Cancellation</td><td>Short rate premium on cancellation</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- S18 -->
+      <section class="guide-section" id="gs-18">
+        <h2>18. Recovery, Towing &amp; Storage</h2>
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-val">$10,000</div><div class="stat-label">Per Occurrence Limit</div></div>
+        </div>
+        <h3>NOT Covered:</h3>
+        <ul>
+          <li>Recovering/towing/storing an uninsured trailer</li>
+          <li>Recovering/transporting/storing cargo</li>
+          <li>Storage charges BEFORE reporting the loss</li>
+          <li>Excess storage if you don't move to a cheaper location when asked</li>
+          <li>Unreasonable/excessive/illegal towing charges</li>
+          <li>Secondary towing or &gt;100 miles without prior approval</li>
+          <li>Storage while claim is suspended</li>
+          <li>Storage after settlement/release signed</li>
+          <li>Storage while required documents haven't been submitted</li>
+        </ul>
+      </section>
+
+      <!-- S19 -->
+      <section class="guide-section" id="gs-19">
+        <h2>19. Fraud, Misrepresentation &amp; Concealment</h2>
+        <h3>What Constitutes Fraud</h3>
+        <ul>
+          <li>Concealing or misrepresenting material facts</li>
+          <li>Fraud, attempted fraud, or false oath</li>
+          <li>Threats related to a claim</li>
+          <li>Applying under a new name/entity to hide claims history</li>
+          <li>Concealing driver violations or accidents</li>
+          <li>Providing false identity documents</li>
+        </ul>
+        <h3>Consequences</h3>
+        <div class="callout callout-danger">
+          <ul style="margin:0">
+            <li>Coverage <strong>VOID</strong> for open or future claims</li>
+            <li>May be cancelled <strong>from inception</strong> (as if never in effect)</li>
+            <li>Premium may be increased from inception with immediate shortfall</li>
+            <li>Applies to coverage holder AND their employees, friends, family, agents</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- S20 -->
+      <section class="guide-section" id="gs-20">
+        <h2>20. Quick Reference Cheat Sheet</h2>
+        <h3>Emergency Contacts</h3>
+        <table>
+          <thead><tr><th>Purpose</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>Report (online)</td><td>www.allunitedrisk.com</td></tr>
+            <tr><td>Report (email)</td><td>claims@allunitedrisk.com</td></tr>
+            <tr><td>Report (phone)</td><td>(844) 95CLAIM / (979) 773-3222</td></tr>
+            <tr><td>Report (fax)</td><td>(979) 318-5454</td></tr>
+            <tr><td>Claim questions</td><td>1-844-952-5246</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Critical Numbers</h3>
+        <div class="stat-row wrap">
+          <div class="stat-box sm"><div class="stat-val">$20K</div><div class="stat-label">Policy Deductible</div></div>
+          <div class="stat-box sm"><div class="stat-val">$175K</div><div class="stat-label">Per-Unit Limit</div></div>
+          <div class="stat-box sm"><div class="stat-val">$1.5M</div><div class="stat-label">Per-Occurrence Limit</div></div>
+          <div class="stat-box sm"><div class="stat-val">$10K</div><div class="stat-label">Tow/Storage Limit</div></div>
+          <div class="stat-box sm"><div class="stat-val">$50K</div><div class="stat-label">ADD Benefit</div></div>
+          <div class="stat-box sm"><div class="stat-val">24 hr</div><div class="stat-label">Report Deadline</div></div>
+          <div class="stat-box sm"><div class="stat-val">5 days</div><div class="stat-label">Photo Deadline</div></div>
+          <div class="stat-box sm"><div class="stat-val">60 days</div><div class="stat-label">Proof of Loss</div></div>
+          <div class="stat-box sm"><div class="stat-val">12 mo</div><div class="stat-label">Reopen Deadline</div></div>
+          <div class="stat-box sm"><div class="stat-val">30 days</div><div class="stat-label">Reinstatement Window</div></div>
+          <div class="stat-box sm"><div class="stat-val">15 days</div><div class="stat-label">Parked Unattended Max</div></div>
+          <div class="stat-box sm"><div class="stat-val">12.5%</div><div class="stat-label">Depreciation / Year</div></div>
+        </div>
+
+        <h3>Coverage Territory</h3>
+        <table>
+          <thead><tr><th>Program</th><th>Territory</th></tr></thead>
+          <tbody>
+            <tr><td><strong>PD</strong></td><td>Contiguous US + DC + Canada</td></tr>
+            <tr><td><strong>NTL</strong></td><td>US + territories/possessions + Puerto Rico</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+    </div><!-- /tab-guide -->
+
+    <!-- ========== QUIZ ========== -->
+    <div id="tab-quiz" class="tab-panel">
+      <div class="page-title">
+        <h1>Knowledge Quiz</h1>
+        <p class="subtitle">70 Questions &bull; Passing Score: 80% (56/70)</p>
+      </div>
+      <div id="quizContainer"></div>
+      <div class="quiz-controls">
+        <button id="submitQuiz" class="btn-primary">Submit &amp; Grade Quiz</button>
+        <button id="resetQuiz" class="btn-secondary" style="display:none">Reset Quiz</button>
+      </div>
+      <div id="quizResult" class="quiz-result" style="display:none"></div>
+    </div>
+
+    <!-- ========== SCENARIOS ========== -->
+    <div id="tab-scenarios" class="tab-panel">
+      <div class="page-title">
+        <h1>Scenario-Based Exercises</h1>
+        <p class="subtitle">18 Real-World Scenarios Across 6 Categories</p>
+      </div>
+      <div id="scenarioContainer"></div>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
