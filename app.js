@@ -300,11 +300,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   guideTOC.classList.add('open');
 
-  // --- Build Quiz ---
+  // --- Build Quiz (per-section grading) ---
   const quizContainer = document.getElementById('quizContainer');
-  quizSections.forEach(section => {
+  const sectionScores = {};
+
+  quizSections.forEach((section, sIdx) => {
     const div = document.createElement('div');
     div.className = 'quiz-section';
+    div.id = 'quiz-sec-' + sIdx;
     let html = `<h3>${section.title}</h3>`;
     section.questions.forEach(q => {
       html += `<div class="quiz-q" data-answer="${q.ans}" data-id="${q.id}">`;
@@ -314,19 +317,22 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       html += `</div><div class="q-explanation">${q.exp}</div></div>`;
     });
+    html += `<div class="section-controls">
+      <button class="btn-primary btn-sm" data-grade="${sIdx}">Grade Section</button>
+      <button class="btn-secondary btn-sm" data-reset="${sIdx}" style="display:none">Reset Section</button>
+      <span class="section-result" id="sec-result-${sIdx}"></span>
+    </div>`;
     div.innerHTML = html;
     quizContainer.appendChild(div);
   });
 
-  // --- Quiz Submit ---
-  const submitBtn = document.getElementById('submitQuiz');
-  const resetBtn = document.getElementById('resetQuiz');
-  const resultDiv = document.getElementById('quizResult');
+  // --- Grade a single section ---
+  function gradeSection(sIdx) {
+    const secDiv = document.getElementById('quiz-sec-' + sIdx);
+    const questions = secDiv.querySelectorAll('.quiz-q');
+    let correct = 0, total = questions.length;
 
-  submitBtn.addEventListener('click', () => {
-    let correct = 0, total = 0;
-    document.querySelectorAll('.quiz-q').forEach(qDiv => {
-      total++;
+    questions.forEach(qDiv => {
       const ans = parseInt(qDiv.dataset.answer);
       const selected = qDiv.querySelector('input:checked');
       const options = qDiv.querySelectorAll('.q-option');
@@ -347,28 +353,101 @@ document.addEventListener('DOMContentLoaded', () => {
         options[ans].classList.add('correct');
       }
       explanation.classList.add('show');
+      // disable inputs after grading
+      qDiv.querySelectorAll('input').forEach(inp => inp.disabled = true);
     });
 
     const pct = Math.round((correct / total) * 100);
     const pass = pct >= 80;
-    resultDiv.style.display = 'block';
-    resultDiv.className = 'quiz-result ' + (pass ? 'pass' : 'fail');
-    resultDiv.innerHTML = `<div style="font-size:32px;margin-bottom:8px">${correct} / ${total}</div>
-      <div style="font-size:20px;margin-bottom:4px">${pct}%</div>
-      <div>${pass ? 'PASSED — Great work!' : 'Did not pass (80% required). Review the highlighted answers and retake.'}</div>`;
-    submitBtn.style.display = 'none';
-    resetBtn.style.display = 'inline-block';
-    resultDiv.scrollIntoView({ behavior: 'smooth' });
-  });
+    sectionScores[sIdx] = { correct, total, pct, pass };
 
-  resetBtn.addEventListener('click', () => {
-    document.querySelectorAll('.quiz-q input').forEach(i => i.checked = false);
-    document.querySelectorAll('.q-option').forEach(o => o.classList.remove('correct','incorrect'));
-    document.querySelectorAll('.q-explanation').forEach(e => e.classList.remove('show'));
-    resultDiv.style.display = 'none';
-    submitBtn.style.display = 'inline-block';
-    resetBtn.style.display = 'none';
-    quizContainer.scrollIntoView({ behavior: 'smooth' });
+    // show result badge
+    const badge = document.getElementById('sec-result-' + sIdx);
+    badge.textContent = `${correct}/${total} (${pct}%) — ${pass ? 'Passed' : 'Needs Review'}`;
+    badge.className = 'section-result show ' + (pass ? 'pass' : 'fail');
+
+    // toggle buttons
+    secDiv.querySelector('[data-grade]').style.display = 'none';
+    secDiv.querySelector('[data-reset]').style.display = 'inline-block';
+
+    updateSummary();
+  }
+
+  // --- Reset a single section ---
+  function resetSection(sIdx) {
+    const secDiv = document.getElementById('quiz-sec-' + sIdx);
+    secDiv.querySelectorAll('.quiz-q input').forEach(i => { i.checked = false; i.disabled = false; });
+    secDiv.querySelectorAll('.q-option').forEach(o => o.classList.remove('correct','incorrect'));
+    secDiv.querySelectorAll('.q-explanation').forEach(e => e.classList.remove('show'));
+
+    const badge = document.getElementById('sec-result-' + sIdx);
+    badge.className = 'section-result';
+    badge.textContent = '';
+
+    secDiv.querySelector('[data-grade]').style.display = 'inline-block';
+    secDiv.querySelector('[data-reset]').style.display = 'none';
+
+    delete sectionScores[sIdx];
+    updateSummary();
+  }
+
+  // --- Update overall summary ---
+  function updateSummary() {
+    const summaryDiv = document.getElementById('quizSummary');
+    const gradedCount = Object.keys(sectionScores).length;
+
+    if (gradedCount === 0) {
+      summaryDiv.style.display = 'none';
+      return;
+    }
+
+    summaryDiv.style.display = 'block';
+    let totalCorrect = 0, totalQuestions = 0;
+    let rowsHtml = '';
+
+    quizSections.forEach((section, sIdx) => {
+      const score = sectionScores[sIdx];
+      if (score) {
+        totalCorrect += score.correct;
+        totalQuestions += score.total;
+        rowsHtml += `<div class="summary-row graded">
+          <span class="s-name">${section.title}</span>
+          <span class="s-score ${score.pass ? 'pass' : 'fail'}">${score.correct}/${score.total} (${score.pct}%)</span>
+        </div>`;
+      } else {
+        rowsHtml += `<div class="summary-row not-graded">
+          <span class="s-name">${section.title}</span>
+          <span class="s-score pending">Not graded yet</span>
+        </div>`;
+      }
+    });
+
+    const allGraded = gradedCount === quizSections.length;
+    const overallPct = totalQuestions > 0 ? Math.round((totalCorrect / totalQuestions) * 100) : 0;
+    const overallPass = allGraded && overallPct >= 80;
+
+    let totalClass = 'partial';
+    let totalLabel = `${totalCorrect} / ${totalQuestions} graded so far (${gradedCount} of ${quizSections.length} sections)`;
+    if (allGraded) {
+      totalClass = overallPass ? 'pass' : 'fail';
+      totalLabel = overallPass
+        ? `${totalCorrect} / ${totalQuestions} (${overallPct}%) — PASSED`
+        : `${totalCorrect} / ${totalQuestions} (${overallPct}%) — Did not pass (80% required)`;
+    }
+
+    summaryDiv.innerHTML = `
+      <h3>Overall Progress</h3>
+      <div class="summary-grid">${rowsHtml}</div>
+      <div class="summary-total ${totalClass}">${totalLabel}</div>
+    `;
+  }
+
+  // --- Wire up section buttons ---
+  document.querySelectorAll('[data-grade]').forEach(btn => {
+    btn.addEventListener('click', () => gradeSection(parseInt(btn.dataset.grade)));
+  });
+  document.querySelectorAll('[data-reset]').forEach(btn => {
+    btn.addEventListener('click', () => resetSection(parseInt(btn.dataset.reset)));
   });
 
   // --- Build Scenarios ---
